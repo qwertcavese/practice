@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>details</title>
+    <script>
+        function details()
+        {
+                var name = document.getElementById("one").innerHTML
+                var Two = document.getElementById("two").innerHTML
+                var three = document.getElementById("three").innerHTML
+                document.writeln(name,Two,three)
+        }
+    </script>
+</head>
+<body align="center">
+        <h1>details regarding following stuents</h1>
+        <table border="1" cellspacing="1" align="center">
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>CONTACT</th>
+                    <th>EMAIL</th>
+                </tr>
+                <tr>
+                    <td><a href="#" onclick=details()>1001</a></td>
+                    <td id="one">abc</td>
+                    <td id="two">98755xx</td>
+                    <td id="three">abc@gmail.com</td>
+                </tr>
+                <tr>
+                    <td><a href="1002.html">1002</a></td>
+                    <td>cde</td>
+                    <td>98756xx</td>
+                    <td>cde@gmail.com</td>
+                </tr>
+                <tr>
+                    <td><a href="1003.html">1003</a></td>
+                    <td>xyz</td>
+                    <td>98757xx</td>
+                    <td>xyz@gmail.com</td>
+                </tr>
+        </table>
+</body>
+</html>

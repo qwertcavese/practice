@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        h2{
+           text-align: center;  
+        }
+        #f1{
+            border: 3px solid red;
+            height: 300px;
+            width: 700px;
+            background-color: yellow;
+            display: flex;
+            /* flex-direction: row; */
+            /* flex-direction: column; */
+            /* flex-direction: column-reverse; */
+            /* flex-direction:row-reverse ; */
+            /* flex-wrap: nowrap; */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+            /* justify-content: flex-start; */
+            /* justify-content: flex-end; */
+            /* justify-content: center; */
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+            /* justify-content: stretch; */
+            /* justify-content: first baseline; */
+            /* justify-content: last baseline; */
+            /* align-items: center; */
+            /* align-items: flex-end; */
+            /* align-items: flex-start; */
+        }
+        .b1{
+            border: 2px solid black;
+            height: 50px;
+            width: 50px;
+        }
+        .child{
+            border: 2px solid black;
+            height: 50px;
+            width: 50px;
+            display:flex;
+            /* align-self: center; */
+            /* align-self: flex-end; */
+            /* align-self: flex-start ; */
+            /* align-self: auto; */
+            /* align-self: stretch; */
+            /* order: ;                              order is to be given so that child element and child element will adjust according to it */
+            /* flex-grow:3 ; */
+            /* flex-shrink: 2; */
+            
+          }
+    </style>
+</head>
+<body>
+    <h2> flex properties with example</h2>
+    <div id="f1">
+    <div class="b1">1</div>
+    <div class="b1">2</div>
+    <div class="b1">3</div>
+    <div class="b1">4</div>
+    <div class="child">5 </div>
+    <div class="b1">6</div>
+    <div class="b1">7</div>
+    <div class="b1">8</div>
+    <div class="b1">9</div>
+    <div class="b1">10</div>
+    </div>
+</body>
+</html>

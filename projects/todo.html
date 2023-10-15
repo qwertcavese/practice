@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo application</title>
+    <style>
+        /* #d1{
+            background-color: aqua;
+        }
+        #print{
+            background-color: yellowgreen;
+        }
+        #addbtn.hover{
+            color: darkblue;
+        } */
+    </style>
+    <script>
+        var arry=[];
+        var temp;
+
+        function display1(){  //display content
+            var tbl="<table> ";
+            for(var i=0;i<arry.length;i++){
+              tbl+="<tr><td><th>"+arry[i].title+"</th>"+arry[i].description+"<button onclick='upt("+i+")'>Update</button><button onclick='spl("+i+")'>Remove</button>"+"</td></tr>";
+            }
+            tbl+="</table>";
+            document.getElementById("print").innerHTML=tbl;
+        }
+
+        function push(){        // array push
+            if(document.getElementById("tle").value==""){
+                alert("Pls enter task title");
+                document.getElementById("tle").focus();       //auto focus cursor in empty input
+            }
+            else if(document.getElementById("addbtn").value=="Update"){
+            arry[temp]=document.getElementById("tle").value
+            document.getElementById("addbtn").value="Add";
+            document.getElementById("tle").focus();
+            display1();
+            }
+            else{
+            var a=document.getElementById("tle").value;
+            var b=document.getElementById("decp").value
+            var map1={title:a,description:b};
+            arry.push(map1);
+            display1();
+            }
+            document.getElementById("tle").value="";
+        }
+        
+        function dlt(){  //delete element from array
+            arry.pop()
+            display1();
+        }
+
+         function spl(a){
+            arry.splice(a,1);       //a refrers to index taken from i on onclick spl function and 1 removes same task else it will remove all task after index
+            display1();
+         }
+
+         function upt(a){
+            document.getElementById("tle").value=arry[a];
+            document.getElementById("tle").focus();       //auto focus cruisor in empty input
+            document.getElementById("addbtn").value="Update";  //value of add button changes to update
+            temp=a;  /* array data is to be changed at same index so, 
+                        only take "a" as it represents index value when click on update */   
+        }
+
+    </script>
+</head>
+<body>
+    <div id="d1">
+        <h1 id="header">TODO LISTS</h1>
+        <input type="text" id="tle" placeholder="Enter title"><br/>
+        <input type="text" id="decp" placeholder="Enter title description">
+        <input type="button" value="Add" id="addbtn" onclick="push()">
+        <input type="button" value="Delete" id="dltbtn" onclick="dlt()">
+    </div>
+    <div>
+         <h2>TASKS:-</h2>
+    </div>
+        <div id="print"></div>
+</body>
+</html>
