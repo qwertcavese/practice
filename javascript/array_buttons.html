@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+
+      // .innerHTML is used for closing tags while .value is used for non-closing tags
+
+      let temp;
+      let arry = [];
+      var i;
+      function dipslay1() {
+        var tbl = "<table>";
+        for (i = 0; i < arry.length; i++) {
+          tbl += "<tr><td>" + arry[i] + "<button onclick='demo2("+i+")'>remove</button><button onclick='demo4("+i+")'>update</button></td></tr>";
+        }
+        tbl += "</table >";
+        document.getElementById("display").innerHTML = tbl; // here .innerHTML is used to get content from html and tbl is used as document.write
+      }
+      let demo1 = () => {
+        if(document.getElementById("updt").value=="update"){
+          arry[temp]=document.getElementById("text1").value
+          document.getElementById("updt").value="push";
+          dipslay1();
+        }
+        else if(document.getElementById("text1").value==""){
+          // alert("please enter data");
+          document.getElementById("display").innerHTML="<p style='color:red;'> PLS ENTER DATA</p>"
+        }
+        else{
+        let z = document.getElementById("text1").value;
+        arry.push(z);
+        dipslay1();
+        }
+        document.getElementById("text1").value = ""; //here .value is used because we want to use only value of input box whose id is text1 and not full box and ="" is used to clear input box after pushing array
+        
+      }
+      function demo2(x) {
+        arry.splice(x,1);
+        // arry.pop();  //delete element in array
+        dipslay1();
+        // console.log(arry);
+      }
+    //   function demo3(y){
+    //   var put=prompt("update value to");
+    //   arry[y]=put;
+    //    dipslay1();
+    //   //  console.log(arry);
+    //   }
+
+        function demo4(k){
+         document.getElementById("updt").value="update";
+         document.getElementById("text1").value=arry[k];
+         temp=k;
+         dipslay1();
+        }
+    </script>
+</head>
+
+  <body>
+    <input type="text" id="text1" autofocus/>
+    <input type="button" value="push" id="updt" onclick="demo1()">
+    <input type="button" value="delete" onclick="demo2()">
+    <div id="display"></div>
+  </body>
+</html>

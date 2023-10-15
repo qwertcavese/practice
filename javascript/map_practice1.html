@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>map 1</title>
+    <script>
+      let arry = [];
+      var temp;
+      var temp1;
+      function display1() {
+        var tbl =
+          "<table border=1px><th>name</th><th>age</th><th>salary</th><th></th>";
+        for (var i = 0; i < arry.length; i++) {
+          tbl +=
+            "<tr><td>" +
+            arry[i].name +
+            "</td>" +
+            "<td>" +
+            arry[i].age +
+            "</td>" +
+            "<td>" +
+            arry[i].salary +
+            "</td><td><button onclick='updt(" +
+            i +
+            ")'>update</button><button onclick='dlt(" +
+            i +
+            ")'>delete</button><input type='checkbox' onclick='chk(" +
+            i +
+            ")'></td></tr>";
+        }
+        tbl += "</table>";
+        document.getElementById("display").innerHTML = tbl;
+      }
+      function psh() {
+        var map1;
+        if (document.getElementById("add1").value == "update") {
+          arry[temp].name = document.getElementById("nm").value;
+          arry[temp].age = document.getElementById("ag").value;
+          arry[temp].salary = document.getElementById("sly").value;
+          document.getElementById("add1").value = "push";
+          display1();
+        } else {
+          var a = document.getElementById("nm").value;
+          var b = document.getElementById("ag").value;
+          var c = document.getElementById("sly").value;
+
+          map1 = { name: a, age: b, salary: c, status: false };
+          // arry.push({name:a,age:b,salary:c,status:false});
+          arry.push(map1);
+          display1();
+        }
+        document.getElementById("nm").value = "";
+        document.getElementById("ag").value = "";
+        document.getElementById("sly").value = "";
+      }
+
+      function updt(x) {
+        document.getElementById("add1").value = "update";
+        document.getElementById("nm").value = arry[x].name;
+        document.getElementById("ag").value = arry[x].age;
+        document.getElementById("sly").value = arry[x].salary;
+        temp = x;
+        // display1();
+      }
+
+      function dlt(y) {
+        arry.splice(y, 1);
+        display1();
+      }
+
+      function chk(i) {
+        arry[i].status = true;
+        console.log(arry);
+      }
+
+      function dlt1() {
+         let newarry=[];
+         for(let i=0;i<arry.length;i++){
+          if(arry[i].status==false){
+            newarry.push(arry[i]);
+          }
+         }
+         arry=newarry;
+        // arry = arry.filter((value) => {
+        //   if (value.status == false) {
+        //     return value;
+        //   }
+        // });
+        display1();
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="nm" placeholder="name" />
+    <input type="text" id="ag" placeholder="age" />
+    <input type="text" id="sly" placeholder="salary" />
+    <input type="button" value="push" id="add1" onclick="psh()" />
+    <input type="button" value="delete" id="d1" onclick="dlt1()" />
+    <div id="display"></div>
+  </body>
+</html>

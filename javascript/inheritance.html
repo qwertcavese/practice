@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>int</title>
+    <script>
+
+        // class car{
+        //     constructor(){
+        //         document.write("I am from car class");
+        //     }
+        // }
+        // class ferrari extends car{  //inheritance class is given first
+        //     constructor(){
+        //         document.write("I am from ferrari class");
+        //     }
+        // }
+        // var obj=new ferrari();
+
+        class car{
+            constructor(color,price){
+             this.c=color;
+             this.p=price;
+            }
+        }
+        class ferrari extends car{
+            constructor(c,p,fuel){
+                super(c,p)
+                this.f=fuel;
+                // console.log(this.c);
+                // console.log(this.p);
+                // console.log(this.f);
+            }
+            
+        }
+        
+        class audi extends ferrari{
+            constructor(c,p,f,seat){
+                super(c,p,f)
+                this.seat=seat;
+                console.log(this.c);
+                console.log(this.p);
+                console.log(this.f);
+                console.log(this.seat);
+            }
+        }
+
+        // var obj=new ferrari("red","45000","water");
+        var obj2=new audi("purple","4500000","whiskey","4");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

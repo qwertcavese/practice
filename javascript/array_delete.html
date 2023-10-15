@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let arry = [];
+
+      function dipslay1() {
+        var tbl = "<table>";
+        for (let i = 0; i < arry.length; i++) {
+          tbl += "<tr><td>" + arry[i] + "<button onclick='demo2("+i+")'>remove</button><button onclick='demo3("+i+")'>update</button></td></tr>";
+        }
+        tbl += "</table >";
+        document.getElementById("display").innerHTML = tbl; // here .innerHTML is used to get content from html and tbl is used as document.write
+      }
+      let demo1 = () => {
+        let z = document.getElementById("text1").value;
+        arry.push(z);
+        dipslay1();
+        document.getElementById("text1").value = ""; //here .value is used because we want to use only value of input box whose id is text1 and not full box and ="" is used to clear input box after pushing array
+        
+      }
+      function demo2(x) {
+        arry.splice(x,1);
+        // arry.pop();  //delete element in array
+        dipslay1();
+        // console.log(arry);
+      }
+      function demo3(y){
+      var put=prompt("update value to");
+      arry[y]=put;
+       dipslay1();
+      //  console.log(arry);
+      }
+    </script>
+</head>
+
+  <body>
+    <input type="text" id="text1" autofocus />
+    <button onclick="demo1()">Push</button>
+    <button onclick="demo2()">Delete</button>
+    <div id="display"></div>
+
+  </body>
+</html>

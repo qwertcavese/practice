@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inh2</title>
+    <script>
+
+        class audi{
+            constructor(color,price){
+             this.color=color;
+             this.price=price;
+            }
+        }
+        class ferrari {
+            constructor(fuel,seat){
+                this.fuel=fuel;
+                this.seat=seat;
+            }
+        }
+
+        class car extends (audi,ferrari){
+            constructor(color,price,fuel,seat){
+            super(color,price,fuel,seat)
+            console.log(this.color);
+            console.log(this.price);
+            console.log(this.fuel);
+            console.log(this.seat);
+        }
+    }
+        var obj=new car("pink","24000","nimu soda","2");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

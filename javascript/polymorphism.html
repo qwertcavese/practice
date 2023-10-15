@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class demo1{
+            constructor(a){
+                this.a=a;
+            }
+            demo1(arg1){
+                console.log(arg1);
+            }
+        }
+
+        class demo2 extends demo1{
+            constructor(a){
+                super(a)
+                // console.log(this.a);
+            }
+            demo1(arg1,arg2){
+                console.log(arg1);
+                console.log(arg2);
+            }
+        }
+
+        var obj=new demo2()
+        // console.log(obj.a);
+        obj.demo1("hello","byye");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // for maximum number
+        // var arry=[5,8,2,10,2,9,12,8,5];
+        // var temp=arry[0];
+        // for(var i=0;i<=arry.length;i++){
+        //     if(arry[i]<arry[i+1]){
+        //         temp=arry[i+1];
+        //     }
+        // }
+        // console.log("maximum:"+temp);
+
+        // var arry=[1,6,2,5,26,2];
+        // var z=Math.max(...arry);
+        // console.log(z);
+        
+        var arry=['1','2','3',{"hello":"welcome"},4,5];
+        var b=20;
+        var c="hello world"
+        // var z=arry;
+        // var[z,y]=arry  // destructure
+        // var[z,...y]=arry
+        // var[a]=arry;
+        // var[...a]=arry;
+        // var[a,b]=arry;
+        // var[...a,b]=arry; //error
+        // var[a,b]=[...arry];
+        // var[a,...b]=[...arry];
+        // var[a,...b]=[arry];
+        var [...arry]=[...arry,b];
+        var [...arry]=[...arry,c];
+        console.log(arry);
+        
+        
+        // var [...c]=[arry];
+        // console.log(c);
+
+        /*here ...arry sepereates each value of array so each value has different index but only arry without
+          spread opreater is consider as single index so incase of 
+          ...arry index is eight where arry has 6\six index upto "5" and then "b" and "c" is pushed
+          whereas,
+          if only arry is considered then index will be zero upto "5" and then "a" and "b" will be two 
+          whole new different arrays */
+          
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

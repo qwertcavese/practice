@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function star(){
+        //     document.write("<br>");
+        //     for(var i=1;i<=10;i++){
+        //        document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+        // document.write("hello");
+        // star();
+        //  document.write("hi");
+        // star();
+        // document.write("hello");
+        // star();  
+        //  document.write("hi");
+        // star();
+
+
+        // function press(){
+        //     document.getElementById("t1").innerHTML="hello"
+        // }
+
+
+        // function add(a,b){
+        //     return a+b;
+        // }
+        // var z=add(2,3);
+        // document.write(z*10)
+        // document.write("<br>");
+        // document.write(z);
+
+
+        // var root=function(a){
+        //     var b=a**0.5;
+        //     return b;
+        // }
+        // var c=root(25);
+        // document.write(c);
+
+        var output=function(){
+            let a=parseInt( document.getElementById("n1").value);
+            let b=parseInt(document.getElementById("n2").value);
+            let c=parseInt(document.getElementById("n3").value);
+
+            if(a>b&&a>c){
+                document.getElementById("d1").innerHTML=a+"&nbsp"+"is greater";
+            }
+            else if(b>a&&b>c){
+                document.getElementById("d1").innerHTML=b+"&nbsp"+"is greater";
+            }
+            else{
+                document.getElementById("d1").innerHTML=c+"&nbsp"+"is greater";
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- <h1 id="t1">hi</h1>
+    <button onclick="press()">submit</button> -->
+
+    <div id="d1">
+    <input type="number" id="n1"><br>
+    <input type="number" id="n2"><br>
+    <input type="number" id="n3"><br>
+    <button onclick="output()">submit</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop</title>
+    <script>
+        // var i;
+        // for(i=0;i<=10;i++)
+        // {
+        //     document.write(+i);
+        //     document.write<"br">
+        // }
+        // for(i=10;i>=0;i--)
+        // {
+        //     document.write(+i);
+        // }
+        // for(i=1;i<=5;i++)
+        // {
+        //     if(i==1 || i==5){
+        //         document.write("$");
+        //     }
+        //     else{
+        //         document.write("*");
+        //     }
+        // }
+        // for(i=1;i<=5;i++)
+        // {
+        //     if(i==1 || i==5){
+        //         document.write("*");
+        //     }
+        //     else{
+        //         document.write("$");
+        //     }
+        // }
+        // for(i=1;i<=5;i++)
+        // {
+        //     if(i%2==0){
+        //         document.write("*");
+        //     }
+        //     else{
+        //         document.write("$");
+        //     }
+        // }
+        // for(i=1;i<=5;i++)
+        // {
+        //     if(i%3==0)
+        //     {
+        //         document.write("$");
+        //     }
+        //     else{
+        //         document.write("*");
+        //     }
+        // }
+        // for(i=1;i<=5;i++)
+        // {
+        //     if(i%2==0){
+        //         document.write("0");
+        //     }
+        //     else{
+        //         document.write("1");
+        //     }
+        // }
+        // var a;
+        //     for(a=1;a<=5;a++)
+        //     {
+        //         document.write(a);
+        //         document.write("<br>");
+        //         for( var j=1;j<=a;j++)
+        //         {
+        //             document.write(j);
+        //         }
+        //     }
+        // var i
+        // for(i=5;i>=1;i--){
+        //     for(j=5;j>=1;j--){
+        //         document.write(j);
+        //     }
+        //     document.write("<br>");
+        //     }
+        // for(var i=1;i<=5;i++){
+        // for(var j=5;j>=1*(i);j--){
+        //     document.write(j);
+        // }
+        // document.write("<br>");
+        // }
+        //     for(var i=1;i<=5;i++){
+        //         if(i%2!=0){
+        //             for(var j=1;j<=5;j++){
+        //                 if(j%2==0){
+        //                     document.write("0");
+        //                 }
+        //                 else{
+        //                     document.write("1");
+        //                 }
+        //             }
+        //         }
+        //         else{
+        //             for(k=1;k<=5;k++){
+        //                 if(k%2==0){
+        //                     document.write("1")
+        //                 }
+        //                 else{
+        //                     document.write("0");
+        //                 }
+        //             }
+        //         }
+        //         document.write("<br>");
+        //     }
+        //     for(var i=1;i<=5;i++){
+        //         for(var j=i;j<=4+i;j++){
+        //             document.write(j);
+        //         }
+        //         document.write("<br>");
+        //     }
+        //     for(let row=1;row<=5;row++){
+        //     for(let j=1;j<=5;j++){
+        //         if(row==1||row==5){
+        //             document.write("*"); 
+        //         }
+        //         else{
+        //             if(j==1||j==5){
+        //                 document.write("*");
+        //             }
+        //             else{
+        //                 document.write("&nbsp;");
+        //                 document.write("&nbsp;");
+        //             }
+        //         }
+        //     }
+        //         document.write("<br>");
+        //     }
+        //     for(let row=1;row<=5;row++){
+        //     for(let j=1;j<=5;j++){
+        //         if(row==1||row==5){
+        //             document.write("*"); 
+        //         }
+        //         else if(row==2){
+        //             if(j==1||j==2||j==5){
+        //                 document.write("*");
+        //             }
+        //             else{
+        //                 document.write("&nbsp");
+        //                 document.write("&nbsp");
+        //             }
+        //         }
+        //         else if(row==3){
+        //             if(j%2!=0){
+        //                 document.write("*");
+        //             }
+        //             else{
+        //                 document.write("&nbsp");
+        //                 document.write("&nbsp");
+        //             }
+        //         }
+        //         else{
+        //             if(j==1||j==4||j==5){
+        //                 document.write("*"); 
+        //             }
+        //             else{
+        //                 document.write("&nbsp");
+        //                 document.write("&nbsp"); 
+        //             }
+        //         }
+        //     }
+        //         document.write("<br>");
+        //     }
+        //     for(var i=1;i<=5;i++){
+        //         for(var j=1;j<=5;j++){
+        //             if(i==j){
+        //                 document.write("$");
+        //             }
+        //             else{
+        //                 document.write("*");
+        //             }
+        //         }
+        //         document.write("<br>");
+        //     }
+        //     for(var i=1;i<=5;i++){
+        //         for(var j=5;j>=1;j--){
+        //             if(i==j){
+        //                 document.write("$");
+        //             }
+        //             else{
+        //                 document.write("*");
+        //             }
+        //         }
+        //         document.write("<br>");                     
+        //     }
+        //     for(var i=1;i<=5;i++){
+        //         if(i==1||i==5){
+        //             for(var j=1;j<=5;j++){
+        //                 if(j==1||j==5){
+        //                     document.write("$");
+        //                 }
+        //                 else{
+        //                     document.write("*");
+        //                 }
+        //             }
+        //         }
+        //         else if(i%2==0){
+        //             for(var k=1;k<=5;k++){
+        //                 if(k%2==0){
+        //                     document.write("$");
+        //                 }
+        //                 else{
+        //                     document.write("*");
+        //                 }
+        //             }
+        //         }
+        //         else{
+        //             for(var x=1;x<=5;x++){
+        //                 if(x==3){
+        //                     document.write("$");
+        //                 }
+        //                 else{
+        //                     document.write("*");
+        //                 }
+        //             }
+        //         }
+        //         document.write("<br>");
+        //     }
+        //     for(var i=1;i<=5;i++){
+        //         for(var j=1;j<=5;j++){
+        //             if(i==1){
+        //                 document.write("1");
+        //             }
+        //             else if(i==2){
+        //                 document.write("2");
+        //             }
+        //             else if(i==3){
+        //                 document.write("3");
+        //             }
+        //             else if(i==4){
+        //                 document.write("4");
+        //             }
+        //             else{
+                        
+        //                 document.write("5");
+        //             }
+        //             }
+                
+        //         document.write("<br>");
+        //     }
+        //     for(var i=1;i<=5;i++){
+        //         for(var j=1;j<=7;j++){
+        //             if(j%2!=0){
+        //                 document.write(j);
+        //             }
+        //             else{
+        //                 document.write("");
+        //             }
+        //         }
+        //         document.write("<br>")
+        //     }
+            // for(var i=1;i<=25;i++){
+            //     if(i%5==0){
+            //         document.write(i);
+            //         document.write("&nbsp");
+            //         document.write("&nbsp");
+            //         document.write("<br>");
+            //     }
+            //     else{
+            //         document.write(i);
+            //         document.write("&nbsp");
+            //     }
+            // }
+                // for(var i=1;i<=5;i++){
+                //     for(var j=1;j<=i;j++){
+                //         document.write("*");
+                //     }
+                //     document.write("<br>");
+                // }
+                // for(var i=1;i<=5;i++){
+                //     for(var j=1;j<=i;j++){
+                //         document.write(j);
+                //     }
+                //     document.write("<br>");
+                // }
+                // for(var i=1;i<=5;i++){
+                //     for(var j=1;j<=(6-i);j++){
+                //         document.write(j);  
+                //     }
+                //     document.write("<br>");
+                // }
+                // for(var i=1;i<=5;i++){
+                //     for(var j=5;j>=i;j--){
+                //         document.write(j);
+                //     }
+                //     document.write("<br>");
+                // }
+                // for(var i=1;i<=5;i++){
+                //     for(var j=i;j>=1;j--){
+                //         document.write(j);
+                //     }
+                //     document.write("<br>");
+                // }
+
+
+            
+                // var row=5;
+                // for(var i=1;i<=5;i++){
+                //     for(var j=1;j<=(row-i);j++){
+                //         document.write("&nbsp");
+                //     }
+                //         for(var k=1;k<=i;k++){
+                //             document.write(k);
+                //         }
+                    
+                //     document.write("<br>");
+                // }
+
+
+
+
+                // for(var i=1;i<=5;i++){
+                //     for(var j=1;j<=9+(-i+1);j++){
+                //         if(i==1&&j%2!=0){
+                //             document.write(j);   
+                //         }
+                //         else if(i==2&&j%2!=0){
+                //             document.write(j);
+                //         }
+                //         else if(i==3){
+                //             if(j%2!=0&&j<6){
+                //                 document.write(j);
+                //             }
+                //             else{
+                //                 document.write("");
+                //             }
+                //         }
+                //         else if(i==4){
+                //             if(j%2!=0&&j<5){
+                //                 document.write(j);
+                //             }
+                //             else{
+                //                 document.write(""); 
+                //             }
+                //         }
+                //         else if(i==5){
+                //             if(j%2!=0&&j<3){
+                //                 document.write(j);
+                //             }
+                //             else{
+                //                 document.write("");
+                //             }
+                //         }
+                //     }
+                //     document.write("<br>");
+                // }
+
+
+                // for(var i=1;i<=5;i++){
+                //     for(var j=1;j<=i;j++){
+                //         document.write(j);
+                //     }
+                //     document.write("<br>");
+                // }
+                // for(var i=1;i<=4;i++){
+                //     for(var j=1;j<=5-i;j++){
+                //         document.write(j);
+                //     }
+                //     document.write("<br>");
+                // }
+
+
+                // for(var i=1;i<=5;i++){
+                //     for(var j=1;j<=6-i;j++){
+                //         document.write(j);
+                //     }
+                //     document.write("<br>");
+                // }
+                // for(var i=1;i<=4;i++){
+                //     for(var j=1;j<=i+1;j++){
+                //         document.write(j);
+                //     }
+                //     document.write("<br>");
+                // }
+
+
+                // for(var i=1;i<=4;i++){
+                //     for(var j=5;j>=i;j--){
+                //         document.write(j);
+                //     }
+                //     document.write("<br>");
+                // }
+                // for(i=1;i<=3;i++){
+                //     for(var j=5;j>=4-i;j--){
+                //         document.write(j);
+                //     }
+                //     document.write("<br>");
+                // }
+
+
+                // for(var i=1;i<=9;i++){
+                //     if(i%2==0){
+                //         for(var j=1+i;j>=1;j--){
+                //            if(j%2!=0){
+                //             document.write(j);
+                //            }
+                //         }
+                //     }
+                //     else{
+                //         document.write("*");
+                //     }
+                //      document.write("<br>");
+                // }
+
+
+                // for(var i=1;i<=5;i++){
+                //     for(var j=i;j<=5;j++){
+                //         document.write(j);
+                //     }
+                //     document.write("<br>");
+                // }
+
+
+                // for(var i=1;i<=5;i++){
+                //     for(var j=i*2;j>=1;j--){
+                //         if(j%2!=0){
+                //             document.write(j); 
+                //         }
+                //         else{
+                //             document.write("");
+                //         }
+                //     }
+                //     document.write("<br>");
+                // }
+                // for(var i=1;i<=4;i++){
+                //     for(var j=9-2*i;j>=1;j--){
+                //         if(j%2!=0){
+                //             document.write(j);
+                //         }
+                //         else{
+                //             document.write("");
+                //         }
+                //     }
+                //     document.write("<br>");
+                // }
+
+
+                
+                // for(var i=1;i<=9;i++){
+                //     for(var j=1;j<=5;j++){
+                //         if(i==2&&j==5||i==8&&j==5){
+                //             document.write("&nbsp");
+                //         }
+                //         else{
+                //             document.write(j);
+                //         }
+                //     }
+                //     for(var k=5;k>=1;k--){
+                //         if(i==2&&k==5||i==8&&k==5){
+                //             document.write("&nbsp");
+                //         }
+                //         else{
+                //         document.write(k);
+                //         }
+                //     }
+                //     document.write("<br>");
+                    
+                // }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

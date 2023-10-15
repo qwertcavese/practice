@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API</title>
+    <script>
+      function clk() {
+        fetch("https://jsonplaceholder.typicode.com/photos")
+          .then((value) => {
+            // console.log(value.json());   it prints data in console
+            return value.json(); // "return" returns the value to use outside function and .json converts api data to string format or text format for reading and using it.
+          })
+          .then((data1) => {
+            // console.log(data1);
+            var tbl = "<table border=1px>";
+            for (var i = 0; i < data1.length; i++) {
+              tbl +=
+                "<tr><td>" +
+                data1[i].albumId +
+                "</td>" +
+                "<td>" +
+                data1[i].id +
+                "</td>" +
+                "<td>" +
+                data1[i].title +
+                "</td>" +
+                "<td> <img src='" +
+                data1[i].thumbnailUrl +
+                "'>" +
+                "</td></tr>";
+            }
+            tbl += "</table>";
+            // console.log(tbl);
+            document.getElementById("display").innerHTML = tbl;
+          });
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="click me" onclick="clk()" />
+    <div id="display"></div>
+  </body>
+</html>

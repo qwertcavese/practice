@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      let arr = [];
+      let demo1 = () => {
+        var z = document.getElementById("text1").value;
+        arr.push(z);
+        let x = "<table border = 1px cellspacing = 2px cellpadding = 0>";
+
+        for (let i = 0; i < arr.length; i++) {
+          x = x + "<thead>" + "<tr>" + "<th>" + arr[i] + "</th>" + "</tr>" + "<tr>" + "<td>" + arr[i] + "</td>" + "</tr>"+"</thead>";
+        }
+        x += "</table>";
+
+    document.getElementById("display").innerHTML = x;
+        // console.log(x);
+      };
+    </script>
+  </head>
+  <body>
+    <input type="text" id="text1" />
+    <button onclick="demo1()">Push</button>
+    <div id="display"></div>
+  </body>
+</html>

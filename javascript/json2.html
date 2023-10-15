@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json2</title>
+    <script>
+
+        function getdata(){
+            fetch("https://fakestoreapi.com/products")
+            .then((value)=> value.json)
+            .then((data)=>{
+                fetch("http://localhost:3000/i",{
+                    method:"post",
+                    body:JSON.srtingify(
+                        data
+                    ),
+                    headers: {
+              "Content-type": "application/json; charset=UTF-8",
+              },
+                }
+            )
+            .then((response)=>response.json)
+            .then((json) => console.log(json))
+        }
+
+    </script>
+</head>
+<body>
+
+    <input type="button" value="get" onclick="getdata()">
+    <div id="display"></div>
+</body>
+</html>
