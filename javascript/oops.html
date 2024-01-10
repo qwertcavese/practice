@@ -7,13 +7,13 @@
     <script>
         class emp{
             constructor(name,age,salary){
-                this.name=name;
+                this.a=name;  //.a is var in which parameter name is stored so we can use it outside;
                 this.age=age;
-                this.salary=salary;
-                document.write(name+"<br>"+age+"<br>"+salary);
+                this.sal=salary;
             }
         }
-        var a=new emp("sujay",19,2000000);
+        var ob=new emp("sujay",19,2000000);
+        console.log(obj.a+obj.age+obj.sal)
     </script>
 </head>
 <body>

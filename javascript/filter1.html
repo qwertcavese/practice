@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILTER</title>
+    <script>
+        var list=[10,20,50,55,88];
+        // function clickme(){
+        //     var z=list.filter(push1);  //filter will make array wait ,here "z" is empty array and first filter will
+        //     //"list" and will store it in "z1" and then updated value will be passed in "z" 
+        //     document.getElementById("ans").innerHTML=z;
+        // }
+        // function push1(z1){
+            //     // console.log(z1);
+            //     return document.getElementById("text1").value < z1;
+            // }
+            
+            
+            function clickme(){
+                var z=list.filter((z1)=>{return document.getElementById("text1").value < z1 });
+                document.getElementById("ans").innerHTML=z;
+                
+        }
+    </script>
+</head>
+<body>
+   <input type="text" id="text1" placeholder="enter value"/>
+   <button onclick="clickme()">Click me</button>
+   <div id="ans"></div>
+</body>
+</html>
